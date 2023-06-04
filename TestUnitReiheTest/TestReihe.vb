@@ -13,7 +13,7 @@ Namespace TestUnitReiheTest
         <Test>
         Public Sub TestReihe()
             Dim Eingabe As Short
-            Dim Vorgabe As Short
+            Dim Vorgabe As Long
             Dim Ergebnis
 
             Eingabe = 4
@@ -24,8 +24,8 @@ Namespace TestUnitReiheTest
             Assert.AreEqual(Vorgabe, Ergebnis)
 
 
-            Eingabe = 100
-            Vorgabe = 100
+            Eingabe = 1000
+            Vorgabe = 500500
 
             Ergebnis = CF.Reihe(Eingabe)
 
