@@ -12,12 +12,24 @@ Namespace TestUnitReiheTest
 
         <Test>
         Public Sub TestReihe()
+            Dim Eingabe As Short
+            Dim Vorgabe As Short
             Dim Ergebnis
 
-            Ergebnis = CF.Reihe()
+            Eingabe = 4
+            Vorgabe = 4
 
-            Assert.AreEqual(0, Ergebnis)
-            Assert.AreNotEqual(1, Ergebnis)
+            Ergebnis = CF.Reihe(Eingabe)
+
+            Assert.AreEqual(Vorgabe, Ergebnis)
+
+
+            Eingabe = 100
+            Vorgabe = 100
+
+            Ergebnis = CF.Reihe(Eingabe)
+
+            Assert.AreEqual(Vorgabe, Ergebnis)
         End Sub
 
     End Class
