@@ -16,6 +16,7 @@ Namespace TestUnitReiheTest
             Dim Vorgabe As Long
             Dim Ergebnis
 
+            'Einfache Eingabe
             Eingabe = 4
             Vorgabe = 10
 
@@ -23,13 +24,46 @@ Namespace TestUnitReiheTest
 
             Assert.AreEqual(Vorgabe, Ergebnis)
 
-
+            'Eingabe größter möglicher Wert
             Eingabe = 4294967295
             Vorgabe = 9223372034707292160
 
             Ergebnis = CF.Reihe(Eingabe)
 
             Assert.AreEqual(Vorgabe, Ergebnis)
+
+            'Eingabe 0 
+            Eingabe = 0
+            Vorgabe = 0
+
+            Ergebnis = CF.Reihe(Eingabe)
+
+            Assert.AreEqual(Vorgabe, Ergebnis)
+
+            'Eingabe negativ
+            Eingabe = -5
+            Vorgabe = 0
+
+            Ergebnis = CF.Reihe(Eingabe)
+
+            Assert.AreEqual(Vorgabe, Ergebnis)
+
+            'Eingabe Nothing 
+            Eingabe = Nothing
+            Vorgabe = 0
+
+            Ergebnis = CF.Reihe(Eingabe)
+
+            Assert.AreEqual(Vorgabe, Ergebnis)
+
+            'Eingabe großer negativer Wert
+            Eingabe = -4294967296
+            Vorgabe = 0
+
+            Ergebnis = CF.Reihe(Eingabe)
+
+            Assert.AreEqual(Vorgabe, Ergebnis)
+
         End Sub
 
 
